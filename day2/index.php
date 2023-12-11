@@ -47,7 +47,7 @@ foreach($arr as $val){
 
 <?php 
 /*************************************** Info Table*********************************************************** */
-$info  = ["Name"=>"AhmedMostafa","Age"=>26,"Email"=>"ahmed@gmail.com","Collage"=>"Faculty of commerce"];
+$info  = ["Name"=>"Mostafa Ahmed","Age"=>35,"Email"=>"mustafa0260@gmail.com","Collage"=>"Faculty of technology"];
 ?>
 <div class="card mt-3">
 <div class="card-header">

@@ -1,23 +1,23 @@
 <?php require_once "parts/header.php"?>
 <?php
-//http://localhost/alwadi/home.php?user=ahmed&pass=123456    [query string]
-//var_dump($_GET);
 $allowedUsers=[
         "user1"=>["username"=>"mohammed","password"=>"123456"],
         "user2"=>["username"=>"ahmed","password"=>"456789"],
 ];
 $login = false;
-foreach ($allowedUsers as $user){
-    if($_POST['user']==$user['username']&&$_POST['pass']==$user['password']){?>
-          $login = true;
-            break;
-    <?php }
+foreach ($allowedUsers as $user)
+{
+    if($_POST['user']==$user['username']&&$_POST['pass']==$user['password'])
+    {
+        $login = true;
+        break;
+    }
 }
+if($login) 
+{
 
-
-<?php require_once "parts/nav.php" 
-if($login){
 ?>
+    <?php require_once "parts/nav.php"?> 
 
 <div class="row">
     <div class="col">
@@ -166,8 +166,10 @@ if($login){
 
 <?php 
 
-}else{
-                        echo "Login ERROR";
+}
+else
+{
+    echo "Login ERROR";
  }
 //for bounce handel wrong username and password
 ?>
