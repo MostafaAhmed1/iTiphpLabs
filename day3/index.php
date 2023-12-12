@@ -77,12 +77,12 @@ function Validate($user, $pass, $lst = [])
         return;
     }
     
-    strip_tags($user);
-    strip_tags($pass);
-    trim($user);
-    trim($pass);
-    htmlspecialchars($user);
-    htmlspecialchars($pass);
+    $user = strip_tags($user);
+    $pass = strip_tags($pass);
+    $user = trim($user);
+    $pass = trim($pass);
+    $user = htmlspecialchars($user);
+    $pass = htmlspecialchars($pass);
     
     $login = false;
     foreach ($lst as $usr)
